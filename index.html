@@ -2,145 +2,135 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>عروضكم - 3orodkom</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Tajawal',sans-serif}
-body{background:#120a2e;color:#fff;padding-bottom:120px}
-.header{background:#2a1a6a;padding:12px;display:flex;justify-content:space-between;position:sticky;top:0;z-index:10}
+body{background:#120a2e;color:#fff;padding-bottom:130px}
+.header{background:#2a1a6a;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
 .card{background:linear-gradient(135deg,#2e1b7a,#4a2fb8);margin:10px;border-radius:20px;padding:14px;border:1px solid rgba(255,255,255,.1)}
-.life{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.life div{background:rgba(255,255,255,.08);padding:10px;border-radius:12px;font-size:13px}
+.life{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.life div{background:rgba(255,255,255,.08);padding:10px;border-radius:12px;font-size:13px;cursor:pointer}
 .cats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
-.cat{background:#fff;color:#000;border-radius:16px;padding:10px;text-align:center;font-weight:800;cursor:pointer}
+.cat{background:#fff;color:#000;border-radius:16px;padding:12px 6px;text-align:center;font-weight:800;cursor:pointer;font-size:13px}
+.cat span{font-size:26px;display:block}
 .offers{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px}
 .offer{background:#fff;color:#000;border-radius:14px;overflow:hidden}
-.offer-img{height:90px;background-size:cover}
-.inp{width:100%;padding:12px;border-radius:10px;border:1px solid #ccc;margin:5px 0}
-.btn{width:100%;padding:12px;background:linear-gradient(90deg,#f5b301,#ff8a00);border:none;border-radius:12px;font-weight:900;cursor:pointer;margin:5px 0}
+.offer-img{height:100px;background-size:cover;background-position:center;position:relative}
+.badge{position:absolute;top:5px;right:5px;background:#ff2d55;color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;font-weight:800}
+.inp{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(0,0,0,.1);margin:5px 0;font-size:14px}
+.btn{width:100%;padding:13px;background:linear-gradient(90deg,#f5b301,#ff8a00);border:none;border-radius:12px;font-weight:900;cursor:pointer;margin:6px 0;color:#000}
 .table{width:100%;background:#fff;color:#000;border-radius:12px;overflow:hidden;border-collapse:collapse;margin:10px 0}
-.table th{background:#2a1a6a;color:#fff;padding:6px;font-size:12px}
-.table td{padding:6px;text-align:center;font-size:13px;font-weight:700;border-bottom:1px solid #eee}
-.total{background:gold!important}
-.nav{position:fixed;bottom:40px;left:8px;right:8px;background:#1a1040;border-radius:20px;display:flex;justify-content:space-around;padding:10px;z-index:10}
-.nav div{font-size:10px;text-align:center;opacity:.6;cursor:pointer}
-.nav div.active{opacity:1;color:gold}
-.ad{position:fixed;bottom:0;left:0;right:0;background:#000;color:gold;text-align:center;padding:8px;font-weight:800;z-index:11}
+.table th{background:#2a1a6a;color:#fff;padding:7px;font-size:11px}
+.table td{padding:7px;text-align:center;font-size:13px;font-weight:700;border-bottom:1px solid #eee}
+.total{background:gold!important;color:#000}
+.nav{position:fixed;bottom:38px;left:8px;right:8px;background:#1a1040;border:1px solid rgba(255,255,255,.15);border-radius:22px;display:flex;justify-content:space-around;padding:10px;z-index:21;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.nav div{font-size:10px;text-align:center;opacity:.6;cursor:pointer;font-weight:700;line-height:1.2}
+.nav div.active{opacity:1;color:#f5b301}
+.ad{position:fixed;bottom:0;left:0;right:0;background:#000;color:#f5b301;text-align:center;padding:9px;font-weight:800;z-index:22;font-size:13px;height:38px;display:flex;align-items:center;justify-content:center}
+.code{background:#000;color:#0f0;padding:8px;border-radius:8px;margin:5px 0;font-family:monospace;font-size:12px;word-break:break-all}
 </style>
 </head>
 <body>
-<div class="header"><b>🎁 عروضكم 3orodkom</b><span onclick="document.dir=document.dir=='rtl'?'ltr':'rtl';this.innerText=document.dir=='rtl'?'EN':'AR'" style="border:1px solid #fff;padding:2px 8px;border-radius:20px;font-size:12px">EN</span></div>
+<div class="header"><b>🎁 عروضكم 3orodkom</b><span onclick="document.dir=document.dir=='rtl'?'ltr':'rtl';this.innerText=document.dir=='rtl'?'EN':'عربي'" style="border:1px solid rgba(255,255,255,.4);padding:3px 10px;border-radius:20px;font-size:12px;cursor:pointer">EN</span></div>
 
-<div id="home">
+<div id="sec-home">
 <div class="card">
-<h3>📅 لوحة حياتك - الثلث الأول</h3>
-<div class="life" style="margin-top:8px">
-<div onclick="this.style.opacity=this.style.opacity=='0.4'?'1':'0.4'">🏃 رياضة<br><small>برنامج اليوم + كورس قابل للتعديل</small></div>
-<div>🕋 قرآن<br><small>ورد + حفظ + أحكام تلاوة</small></div>
-<div>🏠 مواعيد البيت<br><small>يتحكم بها المستخدم</small></div>
-<div>💼 مواعيد العمل<br><small>مهمات يومية</small></div>
+<h3>📅 لوحة حياتك اليومية - الثلث الأول (ثابت بالأعلى)</h3>
+<div class="life">
+<div onclick="this.style.opacity=this.style.opacity=='0.4'?'1':'0.4'">🏃 <b>رياضة</b><br><small>برنامج اليوم + إضافة كورس تمريني لاحقاً</small></div>
+<div onclick="this.style.opacity=this.style.opacity=='0.4'?'1':'0.4'">🕋 <b>قرآن كريم</b><br><small>قراءة + حفظ + أحكام تلاوة</small></div>
+<div onclick="this.style.opacity=this.style.opacity=='0.4'?'1':'0.4'">🏠 <b>مواعيد البيت</b><br><small>يتحكم بها المستخدم</small></div>
+<div onclick="this.style.opacity=this.style.opacity=='0.4'?'1':'0.4'">💼 <b>مواعيد العمل</b><br><small>مواعيد مهمة</small></div>
 </div>
+<button class="btn" onclick="alert('يمكنك إضافة كورس تمريني جديد - قابل للتعديل')">+ إضافة كورس تمريني</button>
 </div>
-<div class="card"><h3>العروض السريعة</h3><div class="cats" id="cats"></div></div>
+<div class="card"><h3>🏷️ الأقسام السريعة</h3><div class="cats" id="catsBox" style="margin-top:8px"></div></div>
 </div>
 
-<div id="offers" style="display:none">
+<div id="sec-offers" style="display:none">
 <div class="card">
-<h3>إضافة عرض جديد (من هاتف التاجر)</h3>
-<select id="c" class="inp">
-<option value="food">🍔 مطاعم</option>
-<option value="travel">✈️ سفر</option>
-<option value="market">🛒 سوبرماركت</option>
-<option value="cloth_men">👔 ملابس رجالية - جديد</option>
-<option value="cloth_women">👗 ملابس نسائية</option>
-<option value="health">💊 صحة</option>
-</select>
+<h3>📦 إضافة عرض جديد - من هاتف التاجر</h3>
+<select id="c" class="inp"><option value="food">🍔 مطاعم</option><option value="travel">✈️ سفر</option><option value="market">🛒 سوبرماركت</option><option value="cloth_men">👔 ملابس رجالية - جديد</option><option value="cloth_women">👗 ملابس نسائية</option><option value="health">💊 صحة</option><option value="fun">🎮 ترفيه</option><option value="electronics">📱 الكترونيات</option></select>
 <input id="t" class="inp" placeholder="تفاصيل المنتج">
 <input id="p" class="inp" placeholder="السعر">
 <input id="ph" class="inp" placeholder="رقم الهاتف">
-<input id="d" class="inp" placeholder="رقم التوصيل">
-<button class="btn" onclick="add()">نشر المنتج 🚀</button>
+<input id="dl" class="inp" placeholder="رقم خدمة التوصيل">
+<button class="btn" onclick="addOffer()">نشر المنتج الآن 🚀</button>
 </div>
 <div class="offers" id="grid"></div>
 </div>
 
-<div id="salla" style="display:none">
+<div id="sec-salla" style="display:none">
 <div class="card">
 <h3>🧺 سلة درر للعوائل</h3>
-<div class="cats">
-<div class="cat" style="background:gold" onclick="alert('سلة 100K تم اختيارها')">100,000<br><small>دينار</small></div>
-<div class="cat" style="background:gold" onclick="alert('سلة 200K')">200,000<br><small>دينار</small></div>
-<div class="cat" style="background:gold" onclick="alert('سلة 300K')">300,000<br><small>دينار</small></div>
+<p style="font-size:13px;opacity:.8">اختار السلة حسب إمكانياتك المادية</p>
+<div class="cats" style="margin-top:10px">
+<div class="cat" style="background:linear-gradient(135deg,#f5b301,#ff8a00)" onclick="alert('تم اختيار سلة 100,000 دينار - توصيل مجاني')">100,000<br><small>دينار عراقي</small></div>
+<div class="cat" style="background:linear-gradient(135deg,#f5b301,#ff8a00)" onclick="alert('سلة 200,000 دينار')">200,000<br><small>دينار</small></div>
+<div class="cat" style="background:linear-gradient(135deg,#f5b301,#ff8a00)" onclick="alert('سلة 300,000 دينار')">300,000<br><small>دينار</small></div>
 </div>
 </div>
 </div>
 
-<div id="matrix" style="display:none">
+<div id="sec-matrix" style="display:none">
 <div class="card">
 <h3>💰 مصفوفة الكاش باك العالمية</h3>
-<select id="fee" class="inp" onchange="calc()"><option value="1">1 $</option><option value="2">2 $</option><option value="3">3 $</option><option value="5">5 $</option><option value="10">10 $</option><option value="25">25 $</option><option value="50">50 $</option><option value="100">100 $</option><option value="250">250 $</option><option value="500">500 $</option></select>
+<p style="font-size:11px;opacity:.8">40% للمشروع و 60% للمصفوفة - مضاعفات الرقم 3</p>
+<select id="fee" class="inp" onchange="calc()"><option value="1">فئة 1 $</option><option value="2">2 $</option><option value="3">3 $</option><option value="4">4 $</option><option value="5">5 $</option><option value="10">10 $</option><option value="15">15 $</option><option value="20">20 $</option><option value="25">25 $</option><option value="50">50 $</option><option value="100">100 $</option><option value="200">200 $</option><option value="250">250 $</option><option value="300">300 $</option><option value="400">400 $</option><option value="500">500 $</option></select>
 <table class="table" id="mt"></table>
-<div class="card" style="margin:5px 0;background:gold;color:#000;font-weight:900;text-align:center" id="res"></div>
-<label style="font-size:12px">رقم تسلسلك:</label><input id="seq" type="number" value="1" class="inp" oninput="calc()">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<div class="card" style="margin:0;text-align:center"><small>رقم تسلسلك</small><h2 id="seqNum">#1</h2></div>
+<div class="card" style="margin:0;text-align:center"><small>إجمالي نفس الفئة</small><h2>363</h2></div>
 </div>
-<div class="card">
-<p style="font-size:12px;line-height:1.8">
-نفس صورتك: 3=34% , 9=11% ,27=7% ,81=5% ,243=3%<br>
-المجموع 363 شخص = $15.24 لفئة 1$<br>
-فئة 2$ = $30.48 , 5$ = $76.2 ... 500$ = $7620
-</p>
+<label style="font-size:12px;margin-top:8px;display:block">رقم تسلسلك:</label>
+<input id="seq" type="number" value="1" class="inp" oninput="calc()">
+<div class="card" style="background:gold;color:#000;font-weight:900;text-align:center" id="res"></div>
 </div>
 </div>
 
-<div id="codes" style="display:none">
+<div id="sec-codes" style="display:none">
 <div class="card">
-<h3>🔐 توليد كودات رقمية</h3>
-<select id="cf" class="inp"><option>1 $</option><option>5 $</option><option>50 $</option><option>500 $</option></select>
+<h3>🔐 توليد كودات رقمية - للمبرمج وصاحب المشروع</h3>
+<select id="cf" class="inp"><option value="1">1 $</option><option value="2">2 $</option><option value="5">5 $</option><option value="10">10 $</option><option value="25">25 $</option><option value="50">50 $</option><option value="100">100 $</option><option value="500">500 $</option></select>
 <input id="cc" type="number" value="5" class="inp" placeholder="عدد الكودات">
-<button class="btn" onclick="gen()">توليد كودات مثل رصيد الهاتف</button>
+<button class="btn" onclick="genCodes()">توليد كودات رقمية مثل رصيد الهاتف</button>
 <div id="clist"></div>
-<div style="background:linear-gradient(90deg,#00d2ff,#3a7bd5);padding:10px;border-radius:12px;margin-top:10px">📲 NFC للمتاجر<br><small>اعطاء الكود للمستهلك يدخل مباشرة للمصفوفة</small><br><button class="btn" style="background:#fff" onclick="alert('NFC مفعل - قرب الهاتف')">تفعيل NFC</button></div>
+<div style="background:linear-gradient(90deg,#00d2ff,#3a7bd5);padding:12px;border-radius:14px;margin-top:12px;display:flex;gap:10px;align-items:center"><div style="font-size:28px">📲</div><div><b>NFC للمتاجر</b><br><small>إعطاء الكود الرقمي للمستهلك يدخل مباشرة لمصفوفة الكاش باك</small><br><button class="btn" style="background:#fff;margin-top:6px" onclick="alert('تم تفعيل NFC - ضع الهاتف على جهاز المتجر')">تفعيل NFC</button></div></div>
 </div>
 </div>
 
-<div id="ads" style="display:none">
+<div id="sec-ads" style="display:none">
 <div class="card">
-<h3>📢 الشريط الإعلاني</h3>
-<table class="table"><tr><th>السعر</th><th>المدة</th></tr><tr><td>1$</td><td>اسبوع</td></tr><tr><td>2$</td><td>اسبوعين</td></tr><tr><td>3$</td><td>3 اسابيع</td></tr><tr><td>4$</td><td>4 اسابيع</td></tr><tr><td>5$</td><td>40 يوم</td></tr></table>
-<input id="ad" class="inp" placeholder="نص اعلانك"><button class="btn" onclick="ads.push(document.getElementById('ad').value);alert('تم النشر')">نشر (يظهر 3 ثواني)</button>
+<h3>📢 الشريط الإعلاني أسفل الشاشة</h3>
+<table class="table"><tr><th>السعر</th><th>المدة</th></tr><tr><td>1$</td><td>أسبوع</td></tr><tr><td>2$</td><td>أسبوعين</td></tr><tr><td>3$</td><td>3 أسابيع</td></tr><tr><td>4$</td><td>4 أسابيع</td></tr><tr><td>5$</td><td>40 يوم</td></tr></table>
+<input id="ad" class="inp" placeholder="نص إعلانك"><button class="btn" onclick="if(document.getElementById('ad').value){ads.push(document.getElementById('ad').value);document.getElementById('ad').value='';alert('تم نشر الإعلان - يظهر 3 ثواني أسفل الشاشة')}">نشر إعلان</button>
 </div>
 </div>
 
 <div class="nav">
-<div class="active" onclick="show('home',this)">🏠<br>اليوم</div>
-<div onclick="show('offers',this)">🏷️<br>عروضكم</div>
-<div onclick="show('salla',this)">🧺<br>سلة</div>
-<div onclick="show('matrix',this)">💰<br>كاش باك</div>
-<div onclick="show('codes',this)">🔑<br>كودات</div>
-<div onclick="show('ads',this)">📢<br>اعلان</div>
+<div class="active" onclick="showSec('home',this)">🏠<br>اليوم</div>
+<div onclick="showSec('offers',this)">🏷️<br>عروضكم</div>
+<div onclick="showSec('salla',this)">🧺<br>سلة درر</div>
+<div onclick="showSec('matrix',this)">💰<br>كاش باك</div>
+<div onclick="showSec('codes',this)">🔑<br>كودات</div>
+<div onclick="showSec('ads',this)">📢<br>إعلان</div>
 </div>
-<div class="ad" id="adbar">مرحبا بكم في عروضكم - أفضل عروض بغداد</div>
+<div class="ad" id="adbar">مرحبا بكم في تطبيق عروضكم - أفضل عروض بغداد 🎁</div>
 
 <script>
-cats=[
-{id:'food',i:'🍔',n:'مطاعم'},
-{id:'travel',i:'✈️',n:'سفر'},
-{id:'market',i:'🛒',n:'سوبرماركت'},
-{id:'cloth_men',i:'👔',n:'ملابس رجالية'},
-{id:'health',i:'💊',n:'صحة'},
-{id:'fun',i:'🎮',n:'ترفيه'},
-];
-let offers=JSON.parse(localStorage.getItem('o')||'[]');
-if(!offers.length)offers=[{c:'cloth_men',t:'قميص رجالي تركي',p:'25,000 د.ع',img:'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400'},{c:'food',t:'برجر عرض خاص',p:'8,000 د.ع',img:'https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=400'}];
-function renderCats(){document.getElementById('cats').innerHTML=cats.map(x=>`<div class=cat onclick="show('offers');filter='${x.id}';render()"><div>${x.i}</div>${x.n}</div>`).join('')}
+let cats=[{id:'food',ic:'🍔',n:'مطاعم'},{id:'travel',ic:'✈️',n:'سفر'},{id:'market',ic:'🛒',n:'سوبرماركت'},{id:'cloth_men',ic:'👔',n:'ملابس رجالية'},{id:'health',ic:'💊',n:'صحة'},{id:'fun',ic:'🎮',n:'ترفيه'}];
+let offers=JSON.parse(localStorage.getItem('off')||'[]');
+if(!offers.length)offers=[{c:'cloth_men',t:'قميص رجالي قطن تركي',p:'25,000 د.ع',im:'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400'},{c:'food',t:'برجر لحم - عرض خاص',p:'8,000 د.ع',im:'https://images.unsplash.com/photo-1568909344668-6f14a07b56a0?w=400'}];
+function renderCats(){document.getElementById('catsBox').innerHTML=cats.map(x=>`<div class=cat onclick="showSec('offers',document.querySelectorAll('.nav div')[1]);filter='${x.id}';render()"><span>${x.ic}</span>${x.n}</div>`).join('')}
 let filter='all';
-function render(){let f=filter=='all'?offers:offers.filter(o=>o.c==filter);document.getElementById('grid').innerHTML=f.map(o=>`<div class=offer><div class=offer-img style="background-image:url(${o.img})"></div><div style="padding:6px"><b>${o.t}</b><br><small>${o.p}</small></div></div>`).join('')}
-function add(){let o={c:document.getElementById('c').value,t:document.getElementById('t').value,p:document.getElementById('p').value,img:'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400'};offers.unshift(o);localStorage.setItem('o',JSON.stringify(offers));render();alert('تم النشر ✅')}
-function calc(){let fee=+document.getElementById('fee').value;let seq=+document.getElementById('seq').value||1;let lv=[{n:3,pc:34},{n:9,pc:11},{n:27,pc:7},{n:81,pc:5},{n:243,pc:3}];let h='<tr><th>المستوى</th><th>العدد</th><th>النسبة</th><th>العمولة</th><th>الاجمالي</th></tr>';let tot=0;lv.forEach((l,i)=>{let per=(fee* l.pc/100);let all=l.n*per;tot+=all;h+=`<tr><td>${['الاول','الثاني','الثالث','الرابع','الخامس'][i]}</td><td>${l.n}</td><td>${l.pc}%</td><td>${per.toFixed(2)}$</td><td>${all.toFixed(2)}$</td></tr>`});h+=`<tr class=total><td>المجموع</td><td>363</td><td>60%</td><td>${(fee*0.6).toFixed(2)}$</td><td>${tot.toFixed(2)}$</td></tr>`;document.getElementById('mt').innerHTML=h;document.getElementById('res').innerHTML=`رقمك #${seq} - تحتاج ${363-seq} بعدك - كاش باك فئة ${fee}$ = $${tot.toFixed(2)}`;}
-function gen(){let f=document.getElementById('cf').value;let n=+document.getElementById('cc').value;let out='';for(let i=0;i<n;i++){out+=`<div style="background:#000;color:#0f0;padding:6px;margin:4px 0;border-radius:6px;font-family:monospace">3OROD-${f}-${Math.random().toString(36).substr(2,9).toUpperCase()}</div>`}document.getElementById('clist').innerHTML=out}
-let ads=['مرحبا بكم في عروضكم','سلة درر 100K 200K 300K','كاش باك 60% - مصفوفة 363','ملابس رجالية خصم 40%'];let ai=0;setInterval(()=>{document.getElementById('adbar').innerText=ads[ai%ads.length];ai++},3000);
-function show(id,el){['home','offers','salla','matrix','codes','ads'].forEach(x=>document.getElementById(x).style.display='none');document.getElementById(id).style.display='block';document.querySelectorAll('.nav div').forEach(d=>d.classList.remove('active'));el.classList.add('active')}
+function render(){let f=filter=='all'?offers:offers.filter(o=>o.c==filter);document.getElementById('grid').innerHTML=f.map(o=>`<div class=offer><div class=offer-img style="background-image:url(${o.im})"><div class=badge>${o.p}</div></div><div style=padding:7px><b style=font-size:13px>${o.t}</b><br><small>📞 ${o.ph||'0770...'}</small></div></div>`).join('')}
+function addOffer(){let o={c:document.getElementById('c').value,t:document.getElementById('t').value,p:document.getElementById('p').value,ph:document.getElementById('ph').value,im:'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400'};if(!o.t||!o.p){alert('اكتب التفاصيل والسعر');return}offers.unshift(o);localStorage.setItem('off',JSON.stringify(offers));render();alert('تم نشر المنتج ✅');showSec('offers',document.querySelectorAll('.nav div')[1])}
+function calc(){let fee=+document.getElementById('fee').value;let seq=+document.getElementById('seq').value||1;let lv=[{n:3,pc:34},{n:9,pc:11},{n:27,pc:7},{n:81,pc:5},{n:243,pc:3}];let h='<tr><th>المستوى</th><th>العدد</th><th>النسبة</th><th>العمولة</th><th>الاجمالي</th></tr>';let tot=0;lv.forEach((l,i)=>{let per=fee*l.pc/100;let all=l.n*per;tot+=all;h+=`<tr><td>${['الأول','الثاني','الثالث','الرابع','الخامس'][i]}</td><td>${l.n}</td><td>${l.pc}%</td><td>${per.toFixed(2)}$</td><td>${all.toFixed(2)}$</td></tr>`});h+=`<tr class=total><td>المجموع</td><td>363</td><td>60%</td><td>${(fee*0.6).toFixed(2)}$</td><td>${tot.toFixed(2)}$</td></tr>`;document.getElementById('mt').innerHTML=h;document.getElementById('seqNum').innerText='#'+seq;let need=363-seq;document.getElementById('res').innerHTML=`تحتاج ${need>0?need:0} مشترك بعدك لاكتمال المصفوفة<br>كاش باك فئة ${fee}$ = $${tot.toFixed(2)}<br>كما في الصورة: فئة 1$ = $15.24`}
+function genCodes(){let f=document.getElementById('cf').value;let n=+document.getElementById('cc').value||5;let out='';for(let i=0;i<n;i++){let cd='3OROD-'+f+'$-'+Math.random().toString(36).substr(2,4).toUpperCase()+'-'+Math.random().toString(36).substr(2,6).toUpperCase();out+=`<div class=code>${cd} | فئة ${f}$ | صالح للتحويل لمستحقيه</div>`}document.getElementById('clist').innerHTML=out}
+let ads=['مرحبا بكم في تطبيق عروضكم - أفضل عروض بغداد 🎁','سلة درر للعوائل 100K 200K 300K','كاش باك 60% - مصفوفة 363 شخص','ملابس رجالية - خصم 40% اليوم'];let ai=0;setInterval(()=>{document.getElementById('adbar').innerText=ads[ai%ads.length];ai++},3000);
+function showSec(id,el){['home','offers','salla','matrix','codes','ads'].forEach(x=>document.getElementById('sec-'+x).style.display='none');document.getElementById('sec-'+id).style.display='block';document.querySelectorAll('.nav div').forEach(d=>d.classList.remove('active'));if(el)el.classList.add('active');window.scrollTo(0,0)}
 renderCats();render();calc();
 </script>
 </body>
